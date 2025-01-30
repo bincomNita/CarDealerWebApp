@@ -1,4 +1,4 @@
-												Car Dealer Web Application
+	Car Dealer Web Application
 The Car Dealer Web Application allows administrators to manage car listings and users to browse available cars and submit inquiries.
 It includes API integrations for seamless functionality.
 
@@ -9,8 +9,12 @@ It includes API integrations for seamless functionality.
 	5.RESTful APIs are included for data management and retrieval.
 
 Technologies:
+			
 	1.Frontend: HTML, CSS, Bootstrap
 	2 Backend: ASP.NET Core (C#)
 	3.Database: SQL Server
 	4.API: RESTful APIs
 
+Note:
+	
+	Please Read Readme file!!!
