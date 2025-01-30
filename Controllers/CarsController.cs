@@ -21,8 +21,7 @@ namespace CarDealerWebApp.Controllers
         }
 
         public IActionResult Index()
-        {
-            // display all the list of gallary items
+        {           
             var cars = _context.Cars.ToList();
             return View(cars);
         }
