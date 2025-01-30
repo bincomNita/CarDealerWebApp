@@ -1,0 +1,18 @@
+﻿@model CarDealerWebApp.Models.Cars
+
+<h2>@Model.Make @Model.Model (@Model.Year)</h2>
+
+<div>
+
+    <img src="@Url.Content("~/Images/" + System.IO.Path.GetFileName(Model.ImageUrl))" width="150" height="150" />
+
+    <p>Make :@Model.Make</p>
+    <p>Model : @Model.Model</p>
+    <p>Year : @Model.Year</p>
+    <p>Price : £@Model.Price</p>
+    <p>Description : @Model.Description</p>
+
+    <button onclick="location.href='@Url.Action("Inquiry", "Cars", new { id = Model.CarId })'">Inquiry</button>
+</div>
+
+<a href="/Cars/Index">Back to Cars</a>

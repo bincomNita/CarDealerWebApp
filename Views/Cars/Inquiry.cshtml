@@ -1,0 +1,27 @@
+﻿@model CarDealerWebApp.Models.Inquiry
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container mt-5">
+        <form method="post" asp-action="SendInquiry" class="w-50 mx-auto p-4 border rounded shadow">
+            <input type="hidden" name="CarId" value="@Model.CarId" />
+            <div class="mb-3">
+                <label for="UserName" class="form-label">Your Name:</label>
+                <input type="text" id="UserName" name="UserName" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label for="UserEmail" class="form-label">Your Email:</label>
+                <input type="email" id="UserEmail" name="UserEmail" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label for="Message" class="form-label">Your Message:</label>
+                <textarea id="Message" name="Message" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100" onclick="location.href='@Url.Action("Inquiry", "Cars", new { id = Model.CarId })'">Submit Inquiry</button>
+        </form>
+    </div>
+</body>
+</html>

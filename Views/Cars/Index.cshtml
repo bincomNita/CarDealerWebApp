@@ -1,0 +1,25 @@
+﻿@model IEnumerable<CarDealerWebApp.Models.Cars>
+<h2>Available Cars</h2>
+<table>
+    <tbody>
+        @foreach (var car in Model)
+        {
+            <tr>
+
+                <td>
+                    <a href="/Cars/Details/@car.CarId">
+                        <img src="@Url.Content("~/Images/" + System.IO.Path.GetFileName(car.ImageUrl))" width="150" height="150" />
+                    </a>
+                </td>
+            </tr>
+           
+            
+        }
+        <tr>
+            <td>
+                <button type="submit" onclick="location.href='@Url.Action("AddCar", "Cars")'">Add Car</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
